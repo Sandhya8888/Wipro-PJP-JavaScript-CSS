@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form>
+Enter number:<input type="number" id="n" name="n"/>
+<input type="submit" value="submit" onclick="fun()"/>
+</form>
+</body>
+<script type="text/javascript">
+function fun(){
+	var n=document.getElementById("n").value;
+	var digit, result = 0;
+	while( n ){
+		digit = n % 10 ;                 
+        result = (result * 10) + digit;  
+        n = n/10|0   ;             
+    }  
+	document.write(result);
+}
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form id="f">
+Enter String:<input type="text" name="s" id="s" required/>
+<input type="submit" name="submit" value="submit" onclick="fun('s')"/>
+</form>
+<script>
+function fun(s) {
+	var s1=document.getElementById("s").value;
+	var s2 = s1.split(' ');
+	for (var i = 0; i < s2.length; i++) {
+	    var subString = s2[i].split('');
+	    for (var j = 0; j < subString.length; j++) {
+	        subString[0] = subString[0].toUpperCase();
+
+	    }
+	    s2[i] = subString.join('');
+	}
+
+	document.write(s2.join(' '));
+}
+</script>
+</body>
+</html>
