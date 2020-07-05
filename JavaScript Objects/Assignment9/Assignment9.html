@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body onload="fun()">
+<input type="text" id="s"/>
+</body>
+<script type="text/javascript">
+function fun() {
+	  var today = new Date();
+	  var h = today.getHours();
+	  var m = today.getMinutes();
+	  var s = today.getSeconds();
+	  m = checkTime(m);
+	  s = checkTime(s);
+	  var p=document.getElementById("s");
+	  p.value=h + ":" + m + ":" + s;
+	  var t = setTimeout(fun, 500);
+	}
+	function checkTime(i) {
+	  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+	  return i;
+	}
+</script>
+</html>
