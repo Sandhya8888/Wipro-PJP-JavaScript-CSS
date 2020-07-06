@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="" onsubmit="fun()">
+Enter Password:<input type="password" id="p"/>
+<input type="submit" value="submit" />
+</form>
+</body>
+<script type="text/javascript">
+function fun(){
+	var p=document.getElementById("p").value;
+	var p1=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+	if(p==""){
+		alert("Please enter password");
+	}
+	else if(!(p.match(p1))){
+		alert("Please enter a password between 6 to 20 characters containing atleast one digit oe uppercase letter and one lowercase letter");
+	}
+	else{
+		alert("Valid password");
+	}
+}
+</script>
+</html>
