@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+function fun(){
+	var fname = document.forms["myform"]["fname"].value;
+	var lname = document.forms["myform"]["lname"].value;
+	var p = document.forms["myform"]["p"].value;
+	var cf =  document.forms["myform"]["cp"].value;
+	var mobile =  document.forms["myform"]["mobile"].value;
+	var p1=  /^[A-Za-z]$/;
+	var p2=  /^[A-Za-z0-9]{6,20}$/;
+	var p3=/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+	var x1=1,x2=1,x3=1,x4=1,x5=1;
+	if(!(fname.match(p1))){
+		document.getElementById("pass1").innerHTML ="Name must not contain numbers".fontcolor("red");
+		x1=0;
+	}
+	if(!(lname.match(p1))){
+		document.getElementById("pass2").innerHTML ="Name must not contain numbers".fontcolor("red");
+		x2=0;
+	}
+	if(p!=cf){
+		document.getElementById("pass3").innerHTML ="Password and Confirm password does not match!".fontcolor("red");
+		x3=0;
+	}
+	if(!(p.match(p2))){
+		document.getElementById("pass3").innerHTML ="Please enter a password between 6 to 20 characters".fontcolor("red");
+		x4=0;
+
+	}
+	if(!(mobile.match(p3))){
+		document.getElementById("pass4").innerHTML ="Please enter mobile number in valid format".fontcolor("red");
+		x5=0;
+	}
+	if(x1==0 || x2==0 || x3==0 ||x4==0 || x5==0){
+		document.getElementById("error").innerHTML ="Required Data Missing!".fontcolor("red").concat( "Enter and Resubmit").fontsize(6).bold();
+		return false;
+	}
+}
+function fun2() {
+	  setTimeout(fun2(){ alert("Hello"); }, 3000);
+	}
+</script>
+</body>
+</html>

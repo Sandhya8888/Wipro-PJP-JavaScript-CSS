@@ -1,0 +1,27 @@
+@charset "ISO-8859-1";
+input:focus{
+	background-color:yellow;
+	box-shadow: 10px 10px 5px grey;
+}
+#submit:hover{
+	background-color: #4CAF50; 
+	color:white;
+}
+a.form{
+	display: block;
+    text-align: center;
+}
+#s{
+	position: absolute;
+  top: 8px;
+  right: 16px;
+}
+body {background-color: #9932CC;
+text-align: center;}
+#myform{
+	background-color: #808080;
+	display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
